@@ -24,7 +24,7 @@ export function ClimaxLetter() {
         <div className="relative w-full h-full rounded-[40px] overflow-hidden glass-dark border-white/5">
           <div className="absolute inset-0 bg-black/70 z-10 backdrop-blur-[2px]" />
           <img 
-            src="/L12.jpeg" 
+            src="./L12.jpeg" 
             alt="Nossa Selfie" 
             className="w-full h-full object-cover opacity-60"
           />

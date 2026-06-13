@@ -49,7 +49,7 @@ function App() {
       <div className="relative z-10 flex flex-col w-full">
         {/* Audio Element */}
       {/* Crie a pasta public/audio e coloque a música self_aware.mp3 lá */}
-      <audio ref={audioRef} src="/audio/self_aware.mp3" loop preload="auto" />
+      <audio ref={audioRef} src="./audio/self_aware.mp3" loop preload="auto" />
 
       {/* Sincronizador de Legendas */}
       <DiscreetSubtitles audioRef={audioRef} />

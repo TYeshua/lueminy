@@ -1,4 +1,5 @@
-import { useEffect, useState, RefObject } from 'react';
+import { useEffect, useState } from 'react';
+import type { RefObject } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Timestamps em segundos (estimados)

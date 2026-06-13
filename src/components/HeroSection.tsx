@@ -35,7 +35,7 @@ export function HeroSection() {
           {/* Gradiente escuro para dar contraste aos textos que podem sobrepor */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/20 to-black/80 z-10" />
           <img 
-            src="/L10.jpeg" 
+            src="./L10.jpeg" 
             alt="Nossa Primeira Foto" 
             className="w-full h-full object-cover transition-transform duration-[3s] hover:scale-105"
           />

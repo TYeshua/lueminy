@@ -3,14 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
 const poems = [
-  { id: "p1", src: "/L12.jpeg", author: "Luís de Camões", text: "Amor é fogo que arde sem se ver,\né ferida que dói, e não se sente;\né um contentamento descontente,\né dor que desatina sem doer." },
-  { id: "p2", src: "/L1.jpeg", author: "Vinícius de Moraes", text: "De tudo, ao meu amor serei atento\nAntes, e com tal zelo, e sempre, e tanto\nQue mesmo em face do maior encanto\nDele se encante mais meu pensamento." },
-  { id: "p3", src: "/L5.jpeg", author: "Pablo Neruda", text: "Em teu abraço eu abraço o que existe,\na areia, o tempo, a árvore da chuva.\nE tudo vive para que eu viva..." },
-  { id: "p4", src: "/L9.jpeg", author: "Carlos D. de Andrade", text: "O meu tempo e o teu, amada,\ntranscendem qualquer medida.\nAlém do amor, não há nada,\namar é o sumo da vida." },
-  { id: "p5", src: "/L2.jpeg", author: "Cora Coralina", text: "Nas palmas de tuas mãos\nleio as linhas da minha vida.\nLinhas cruzadas, sinuosas,\ninterferindo no teu destino." },
-  { id: "p6", src: "/L8.jpeg", author: "Mario Quintana", text: "Se tu me amas, ama-me baixinho\nNão o grites de cima dos telhados.\nDeixa em paz os passarinhos.\nDeixa em paz a mim!" },
-  { id: "p7", src: "/L11.jpeg", author: "Castro Alves", text: "Quero um beijo sem fim,\nQue dure a vida inteira e aplaque o meu desejo!\nFerve-me o sangue. Acalma-o com teu beijo..." },
-  { id: "p8", src: "/L4.jpeg", author: "Paulo Leminski", text: "amar é um elo\nentre o azul\ne o amarelo." }
+  { id: "p1", src: "./L12.jpeg", author: "Luís de Camões", text: "Amor é fogo que arde sem se ver,\né ferida que dói, e não se sente;\né um contentamento descontente,\né dor que desatina sem doer." },
+  { id: "p2", src: "./L1.jpeg", author: "Vinícius de Moraes", text: "De tudo, ao meu amor serei atento\nAntes, e com tal zelo, e sempre, e tanto\nQue mesmo em face do maior encanto\nDele se encante mais meu pensamento." },
+  { id: "p3", src: "./L5.jpeg", author: "Pablo Neruda", text: "Em teu abraço eu abraço o que existe,\na areia, o tempo, a árvore da chuva.\nE tudo vive para que eu viva..." },
+  { id: "p4", src: "./L9.jpeg", author: "Carlos D. de Andrade", text: "O meu tempo e o teu, amada,\ntranscendem qualquer medida.\nAlém do amor, não há nada,\namar é o sumo da vida." },
+  { id: "p5", src: "./L2.jpeg", author: "Cora Coralina", text: "Nas palmas de tuas mãos\nleio as linhas da minha vida.\nLinhas cruzadas, sinuosas,\ninterferindo no teu destino." },
+  { id: "p6", src: "./L8.jpeg", author: "Mario Quintana", text: "Se tu me amas, ama-me baixinho\nNão o grites de cima dos telhados.\nDeixa em paz os passarinhos.\nDeixa em paz a mim!" },
+  { id: "p7", src: "./L11.jpeg", author: "Castro Alves", text: "Quero um beijo sem fim,\nQue dure a vida inteira e aplaque o meu desejo!\nFerve-me o sangue. Acalma-o com teu beijo..." },
+  { id: "p8", src: "./L4.jpeg", author: "Paulo Leminski", text: "amar é um elo\nentre o azul\ne o amarelo." }
 ];
 
 interface BentoImageProps {
