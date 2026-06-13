@@ -26,6 +26,8 @@ function App() {
     <main className="bg-transparent min-h-screen font-sans antialiased text-white selection:bg-white/30 relative overflow-hidden">
       <TouchHearts />
       
+
+
       <div className="fixed inset-0 z-0 pointer-events-auto">
         <Lightfall
           colors={['#ffb3c6', '#ff8fab', '#fb6f92']}

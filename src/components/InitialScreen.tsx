@@ -13,7 +13,7 @@ export function InitialScreen({ onStart, isVisible }: InitialScreenProps) {
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 1.5, ease: "easeInOut" } }}
-          className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-10 bg-black/40 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-8 bg-black/40 backdrop-blur-sm"
         >
           {/* Instruções de Áudio */}
           <motion.div

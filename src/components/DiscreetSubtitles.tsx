@@ -55,7 +55,7 @@ export function DiscreetSubtitles({ audioRef }: { audioRef: RefObject<HTMLAudioE
   }, [audioRef]);
 
   return (
-    <div className="fixed bottom-12 left-0 right-0 z-40 pointer-events-none flex justify-center px-4">
+    <div className="fixed bottom-24 pb-safe left-0 right-0 z-40 pointer-events-none flex justify-center px-4">
       <AnimatePresence mode="wait">
         {currentLine && (
           <motion.div
@@ -64,12 +64,12 @@ export function DiscreetSubtitles({ audioRef }: { audioRef: RefObject<HTMLAudioE
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             exit={{ opacity: 0, y: -10, filter: 'blur(8px)' }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="px-8 py-4 rounded-full bg-white/5 border border-white/20 shadow-[0_8px_32px_rgba(255,255,255,0.1)] backdrop-blur-2xl max-w-sm text-center relative overflow-hidden"
+            className="px-6 py-4 rounded-full glass max-w-sm text-center relative overflow-hidden shadow-[0_8px_32px_rgba(255,255,255,0.1)]"
           >
-            {/* Brilho interno do vidro */}
-            <div className="absolute inset-0 bg-gradient-to-b from-white/20 to-transparent pointer-events-none rounded-full" />
+            {/* Brilho interno do vidro seguro para iOS */}
+            <div className="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent pointer-events-none" />
             
-            <p className="text-[13px] tracking-[0.2em] uppercase font-bold mix-blend-overlay text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
+            <p className="text-[12px] tracking-[0.2em] uppercase font-bold text-white drop-shadow-[0_2px_10px_rgba(255,255,255,0.8)] relative z-10">
               {currentLine}
             </p>
           </motion.div>
