@@ -42,7 +42,7 @@ const BentoImage = ({ item, className = "", onClick }: BentoImageProps) => (
   </motion.div>
 );
 
-const appleSpring = { type: "spring", stiffness: 350, damping: 35, mass: 0.8 };
+const appleSpring = { type: "spring" as const, stiffness: 350, damping: 35, mass: 0.8 };
 
 export function BentoGallery() {
   const [selectedId, setSelectedId] = useState<string | null>(null);

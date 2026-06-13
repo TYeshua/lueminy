@@ -19,12 +19,12 @@ export function InitialScreen({ onStart, isVisible }: InitialScreenProps) {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", stiffness: 300, damping: 25, mass: 0.8 }}
-            className="flex items-center gap-3 px-8 py-4 rounded-full glass hover:bg-white/20 transition-colors"
+            transition={{ delay: 0.5, type: "spring", stiffness: 300, damping: 25, mass: 0.8 }}
+            className="flex flex-col items-center gap-3 text-white/70"
           >
-            <Heart className="w-5 h-5 text-white animate-pulse" fill="currentColor" />
-            <span className="text-sm tracking-widest font-medium uppercase">
-              Toque para abrir seu presente
+            <Volume2 className="w-8 h-8 animate-pulse text-white/90" strokeWidth={1.5} />
+            <span className="text-[10px] tracking-[0.3em] uppercase font-semibold text-center px-4">
+              Aumente o volume do iPhone
             </span>
           </motion.div>
 
@@ -38,15 +38,17 @@ export function InitialScreen({ onStart, isVisible }: InitialScreenProps) {
               onStart();
             }}
             whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.9 }}
+            whileTap={{ scale: 0.9, transition: { type: "spring", stiffness: 400, damping: 25 } }}
             animate={{ 
               boxShadow: ["0px 0px 0px rgba(255,255,255,0)", "0px 0px 20px rgba(255,255,255,0.3)", "0px 0px 0px rgba(255,255,255,0)"] 
             }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="glass px-8 py-4 rounded-full flex items-center gap-3 text-white/90 font-light tracking-wide text-lg"
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="glass px-8 py-4 rounded-full flex items-center gap-3 text-white/90 font-light tracking-wide text-lg relative z-10 hover:bg-white/10 transition-colors"
           >
-            <Heart className="w-5 h-5 text-white/80" strokeWidth={1.5} />
-            Toque para abrir seu presente
+            <Heart className="w-5 h-5 text-white animate-pulse" fill="currentColor" />
+            <span className="text-sm tracking-widest font-medium uppercase">
+              Toque para abrir
+            </span>
           </motion.button>
         </motion.div>
       )}
