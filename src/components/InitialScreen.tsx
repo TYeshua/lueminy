@@ -19,11 +19,13 @@ export function InitialScreen({ onStart, isVisible }: InitialScreenProps) {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
-            className="flex flex-col items-center gap-3 text-white/70"
+            transition={{ type: "spring", stiffness: 300, damping: 25, mass: 0.8 }}
+            className="flex items-center gap-3 px-8 py-4 rounded-full glass hover:bg-white/20 transition-colors"
           >
-            <Volume2 className="w-8 h-8 animate-pulse text-white/90" strokeWidth={1.5} />
-            <span className="text-[10px] tracking-[0.3em] uppercase font-semibold">Aumente o volume</span>
+            <Heart className="w-5 h-5 text-white animate-pulse" fill="currentColor" />
+            <span className="text-sm tracking-widest font-medium uppercase">
+              Toque para abrir seu presente
+            </span>
           </motion.div>
 
           {/* Botão Magnético */}

@@ -42,6 +42,8 @@ const BentoImage = ({ item, className = "", onClick }: BentoImageProps) => (
   </motion.div>
 );
 
+const appleSpring = { type: "spring", stiffness: 350, damping: 35, mass: 0.8 };
+
 export function BentoGallery() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const selectedPoem = poems.find((p) => p.id === selectedId);
@@ -114,12 +116,17 @@ export function BentoGallery() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
-            onClick={() => setSelectedId(null)}
+            transition={{ duration: 0.4 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/60 backdrop-blur-xl"
           >
+            <div 
+              className="absolute inset-0" 
+              onClick={() => setSelectedId(null)} 
+            />
             <motion.div
               layoutId={`card-container-${selectedId}`}
-              className="relative w-full max-w-sm max-h-[85vh] rounded-[40px] overflow-hidden bg-[#15050e] shadow-2xl flex flex-col"
+              transition={appleSpring}
+              className="relative w-full max-w-[400px] bg-[#111] rounded-[32px] overflow-hidden shadow-2xl flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
               <button 
@@ -141,8 +148,8 @@ export function BentoGallery() {
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="relative z-20 flex-1 flex flex-col items-center justify-center p-8 text-center -mt-16"
+                transition={{ delay: 0.1, ...appleSpring }}
+                className="relative z-20 flex-1 flex flex-col items-center justify-center p-8 text-center -mt-16 bg-gradient-to-t from-black via-[#111]/90 to-transparent"
               >
                 <p className="text-lg md:text-xl font-light text-white/90 leading-relaxed italic drop-shadow-md whitespace-pre-line">
                   "{selectedPoem.text}"

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 
 const lyrics = [
@@ -12,8 +12,12 @@ const lyrics = [
 
 export function HeroSection() {
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 800], [0, 250]);
-  const opacity = useTransform(scrollY, [0, 400], [1, 0]);
+  
+  // Smoothing scroll para efeito cinematográfico Apple
+  const smoothY = useSpring(scrollY, { stiffness: 100, damping: 30, mass: 0.5 });
+  
+  const y = useTransform(smoothY, [0, 800], [0, 250]);
+  const opacity = useTransform(smoothY, [0, 400], [1, 0]);
 
   const [currentLyricIndex, setCurrentLyricIndex] = useState(0);
 
